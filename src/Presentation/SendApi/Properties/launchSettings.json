@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "SendApi": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:56093;http://localhost:56094"
+    }
+  }
+}

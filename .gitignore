@@ -1,0 +1,29 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Packages
+*.nupkg
+*.snupkg
+
+# Other
+*.DS_Store
+Thumbs.db
+
+# Exclude frontend/app
+frontend/app/

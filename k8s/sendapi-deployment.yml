@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sendapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sendapi
+  template:
+    metadata:
+      labels:
+        app: sendapi
+    spec:
+      containers:
+      - name: sendapi
+        image: sendapi:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sendapi-service
+spec:
+  selector:
+    app: sendapi
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: LoadBalancer

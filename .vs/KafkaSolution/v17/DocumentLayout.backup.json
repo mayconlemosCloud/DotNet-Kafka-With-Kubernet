@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lemos\\Desktop\\Projeto\\dotnet\\kafka\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9E86B6-94D4-444B-ACA0-8FBFE84428B0}|src\\Domain\\Domain.csproj|c:\\users\\lemos\\desktop\\projeto\\dotnet\\kafka\\src\\domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9E86B6-94D4-444B-ACA0-8FBFE84428B0}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\lemos\\Desktop\\Projeto\\dotnet\\kafka\\src\\Domain\\Entities\\Message.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Entities\\Message.cs",
+              "ToolTip": "C:\\Users\\lemos\\Desktop\\Projeto\\dotnet\\kafka\\src\\Domain\\Entities\\Message.cs",
+              "RelativeToolTip": "src\\Domain\\Entities\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T20:44:50.614Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

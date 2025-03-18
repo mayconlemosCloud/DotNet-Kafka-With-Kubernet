@@ -1,0 +1,14 @@
+### Enviar mensagem para a API de envio
+
+POST http://localhost:56094/Message
+Content-Type: application/json
+
+{
+  "Id": 1,
+  "Content": "Hello, TESTE!",
+  "Timestamp": "2025-03-15T20:51:50Z"
+}
+
+### Receber mensagens da API de recebimento
+
+GET http://localhost:56096/Receive

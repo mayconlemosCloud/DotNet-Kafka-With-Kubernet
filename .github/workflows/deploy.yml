@@ -1,0 +1,51 @@
+name: Deploy to Kubernetes
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.0.x'
+
+    - name: Build SendApi Docker image
+      run: |
+        docker build -t sendapi:latest ./src/Presentation/SendApi
+
+    - name: Build ReceiveApi Docker image
+      run: |
+        docker build -t receiveapi:latest ./src/Presentation/ReceiveApi
+
+    - name: Build Frontend Docker image
+      run: |
+        docker build -t frontend:latest ./frontend/app
+
+    - name: Load images into Kubernetes cluster
+      uses: docker/setup-buildx-action@v2
+      with:
+        buildkitd-flags: --allow-insecure-entitlement security.insecure
+    - run: |
+        kind load docker-image sendapi:latest
+        kind load docker-image receiveapi:latest
+        kind load docker-image frontend:latest
+
+    - name: Set up kubectl
+      uses: azure/setup-kubectl@v3
+      with:
+        version: 'latest'
+
+    - name: Deploy to Kubernetes
+      run: |
+        kubectl apply -f k8s/sendapi-deployment.yml
+        kubectl apply -f k8s/receiveapi-deployment.yml
+        kubectl apply -f k8s/frontend-deployment.yml
