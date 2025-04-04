@@ -1,0 +1,12 @@
+@startuml
+actor Frontend
+participant SendApi
+participant Kafka
+participant ReceiveApi
+database SQLite
+
+Frontend -> SendApi: Envia mensagem
+SendApi -> Kafka: Publica mensagem no tópico
+Kafka -> ReceiveApi: Entrega mensagem do tópico
+ReceiveApi -> SQLite: Armazena mensagem no banco
+@enduml
