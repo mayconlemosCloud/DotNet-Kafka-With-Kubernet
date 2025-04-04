@@ -18,9 +18,15 @@ Este projeto implementa um sistema baseado em Kafka para envio e recebimento de 
 
 ## Diagrama do Fluxo
 
-![Diagrama do Fluxo](diagrama-fluxo.png)
+```mermaid
+flowchart TD
+    Frontend[Frontend] -->|Envia mensagem| SendApi[SendApi]
+    SendApi -->|Publica mensagem no tópico| Kafka[Kafka]
+    Kafka -->|Consome mensagem do tópico| ReceiveApi[ReceiveApi]
+    ReceiveApi -->|Processa e armazena mensagem| SQLite[SQLite]
+```
 
-> **Nota**: O diagrama acima foi gerado a partir do código PlantUML. Para atualizá-lo, edite o arquivo `diagrama-fluxo.puml` e gere uma nova imagem.
+
 
 ## Estrutura do Projeto
 
