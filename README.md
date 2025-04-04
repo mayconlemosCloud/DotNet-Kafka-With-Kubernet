@@ -18,7 +18,7 @@ Este projeto implementa um sistema baseado em Kafka para envio e recebimento de 
 
 ## Diagrama do Fluxo
 
-![Diagrama do Fluxo](docs/diagrama-fluxo.png)
+![Diagrama do Fluxo](diagrama-fluxo.png)
 
 > **Nota**: O diagrama acima foi gerado a partir do código PlantUML. Para atualizá-lo, edite o arquivo `diagrama-fluxo.puml` e gere uma nova imagem.
 
